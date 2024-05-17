@@ -80,7 +80,7 @@ To install and run the Notebook project on your local machine, follow these step
     ```bash
     npm run dev
     ```
-
+      
 9. **Run the application:**
 
     ```bash
@@ -93,14 +93,12 @@ To install and run the Notebook project on your local machine, follow these step
 - Register or log in with an existing account.
 - Start creating, editing, and deleting notes.
 
-
 ## Contributors
 
 <ul>
     <li>RaminTuzelis</li>
     <li>Aurimas</li>
 </ul>
-
 
 ## License
 
