@@ -61,12 +61,12 @@ To install and run the Notebook project on your local machine, follow these step
    Update your `.env` file with your database credentials:
 
     ```plaintext
-    DB_CONNECTION=mysql
+    DB_CONNECTION=
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=notebook
-    DB_USERNAME=root
-    DB_PASSWORD=password
+    DB_DATABASE=
+    DB_USERNAME=
+    DB_PASSWORD=
     ```
 
 7. **Run database migrations:**
@@ -97,7 +97,8 @@ To install and run the Notebook project on your local machine, follow these step
 
 <ul>
     <li>RaminTuzelis</li>
-    <li>Aurimas</li>
+    <li>Aurimas12</li>
+    <li>Jurij Takun</li>
 </ul>
 
 ## License
