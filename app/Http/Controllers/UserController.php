@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     /**
      *  * @OA\Info(
-     *     title="Your API Title",
+     *     title="Notebook API",
      *     version="1.0.0",
      *     description="A description of your API",
      *     @OA\Contact(
