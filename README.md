@@ -93,6 +93,18 @@ To install and run the Notebook project on your local machine, follow these step
 - Register or log in with an existing account.
 - Start creating, editing, and deleting notes.
 
+
+# Run front-end steps:
+
+   **Run front-end:**
+
+    ```bash
+    cd nfe/
+    npm run dev
+    ```
+
+#### Visit `http://localhost:3000/` to see the front-end application running
+
 ## Contributors
 
 <ul>
