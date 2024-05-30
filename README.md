@@ -2,25 +2,6 @@
 
 Notebook is a simple web application designed for personal note-taking. This project allows users to create, edit, and delete notes, as well as track the time spent on various tasks. The project start date is May 18, 2024.
 
-## Features
-
-<ul>
-    <li>Create, edit, and delete notes</li>
-    <li>User registration and login</li>
-    <li>Individual user notes</li>
-    <li>Team notes (coming soon)</li>
-    <li>Time tracking for various tasks (coming soon)</li>
-    <li>Weekly and monthly time statistics (coming soon)</li>
-</ul>
-
-## Future Plans
-
-<ul>
-    <li>Team Notes: Allow groups of 3-5 people to share the same notes</li>
-    <li>Time Tracking: Track the time spent on different tasks</li>
-    <li>Weekly and Monthly Statistics: View time spent on specific tasks over a week or month</li>
-</ul>
-
 ## Installation
 
 To install and run the Notebook project on your local machine, follow these steps:
@@ -32,71 +13,57 @@ To install and run the Notebook project on your local machine, follow these step
     cd notebook
     ```
 
-2. **Install PHP dependencies:**
+# Run back-end steps:
+
+1. **Enter the laradock folder and rename `.env.example` to `.env`**
 
     ```bash
-    composer install
+    cp laradock/.env.example laradock/.env
     ```
 
-3. **Install JavaScript dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-4. **Create a copy of the `.env` file:**
-
-    ```bash
-    cp .env.example .env
-    ```
-
-5. **Generate the application key:**
-
-    ```bash
-    php artisan key:generate
-    ```
-
-6. **Set up your database:**
-
-   Update your `.env` file with your database credentials:
+2. **Update the Laradock `.env` file:**
 
     ```plaintext
-    DB_CONNECTION=
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=
-    DB_USERNAME=
-    DB_PASSWORD=
+    APP_CODE_PATH_CONTAINER=/var/www/public
+    MYSQL_VERSION=5.7
     ```
 
-7. **Run database migrations:**
+3. **Update the Laradock `ngnix/sites/` folder:**
+    
+    ```plaintext
+    rename laravel.conf.example to laravel.conf
+    ```
+    `server_name notebook.local;
+    root /var/www/public/notebook/public;`
+
+4. **Update the Laravel `.env` file:**
+    ```plaintext
+    APP_URL=http://notebook.local
+    DB_CONNECTION=mysql
+    DB_HOST=mysql
+    ```
+
+5. **Run the containers:**
 
     ```bash
-    php artisan migrate
+    make up-build
     ```
-
-8. **Compile the application assets:**
-
-    ```bash
-    npm run dev
-    ```
-      
-9. **Run the application:**
+6. **Run migrations:**
 
     ```bash
-    php artisan serve
+    make up-build
     ```
+
 
 ## Usage
 
-- Visit `http://localhost:8000` to see the application running.
+- Visit `http://notebook.local` to see the application running.
 - Register or log in with an existing account.
 - Start creating, editing, and deleting notes.
 
-
 # Run front-end steps:
 
-   **Run front-end:**
+**Run front-end:**
 
     ```bash
     cd nfe/
