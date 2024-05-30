@@ -15,6 +15,12 @@ To install and run the Notebook project on your local machine, follow these step
 
 # Run back-end steps:
 
+1. **Clone Laradock inside your PHP project:**
+
+    ```bash
+    git clone https://github.com/Laradock/laradock.git
+    ```
+
 1. **Enter the laradock folder and rename `.env.example` to `.env`**
 
     ```bash
@@ -34,7 +40,7 @@ To install and run the Notebook project on your local machine, follow these step
     rename laravel.conf.example to laravel.conf
     ```
     `server_name notebook.local;
-    root /var/www/public/notebook/public;`
+    root /var/www/public/public;`
 
 4. **Update the Laravel `.env` file:**
     ```plaintext
@@ -53,8 +59,12 @@ To install and run the Notebook project on your local machine, follow these step
     ```bash
     make up-build
     ```
+   
+6. **Generate the application key:**
 
-
+    ```bash
+    php artisan key:generate
+    ```
 ## Usage
 
 - Visit `http://notebook.local` to see the application running.
