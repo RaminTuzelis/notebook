@@ -16,4 +16,4 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     // Add more custom rules here
   },
-};
+}
