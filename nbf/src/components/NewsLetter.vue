@@ -42,7 +42,7 @@ const dialogType = ref(''); // success, error
 const subscribe = () => {
   if (validateEmail(email.value)) {
     dialogTitle.value = 'Success';
-    dialogMessage.value = 'You have successfully subscribed!';
+    dialogMessage.value = `You have successfully subscribed ${email.value}!`;
     dialogType.value = 'success';
   } else {
     dialogTitle.value = 'Error';
