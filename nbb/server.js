@@ -1,11 +1,18 @@
-const http = require('http');
+const express = require('express');
+const cors = require('cors');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+const app = express();
+const port = 3001;
+
+// CORS middleware
+app.use(cors());
+
+// Pagrindinis endpointas
+app.get('/', (req, res) => {
+  res.send('Hello World\n');
 });
 
-server.listen(3000, '127.0.0.1', () => {
-  console.log('Server running at http://127.0.0.1:3000/');
+// Klausykite užklausų nurodytu prievadu
+app.listen(port, () => {
+  console.log(`Server running at http://127.0.0.1:${port}/`);
 });
